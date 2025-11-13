@@ -26,12 +26,12 @@ class SigninPage:
         return self
 
     def fill_password(self, value):
-        with allure.step(f"Заполнить пароль: {value}"):
+        with allure.step(f"Заполнить пароль"):
             self.password.type(value)
         return self
 
     def fill_signin_form(self, user: User):
-        with allure.step(f"Заполнить форму данными пользователя {user}"):
+        with allure.step(f"Заполнить форму данными пользователя {user.email}"):
             (self
              .fill_email(user.email)
              .fill_password(user.password)
