@@ -13,6 +13,16 @@ from utils import allure_attach
 DEFAULT_BROWSER_VERSION = "128.0"
 DEFAULT_BROWSER_NAME = "chrome"
 
+def pytest_addoption(parser):
+    parser.addoption(
+        '--browser_name',
+        default='chrome'
+    )
+    parser.addoption(
+        '--browser_version',
+        default='128.0'
+    )
+
 @pytest.fixture
 def signin_page():
     return SigninPage()
