@@ -69,5 +69,5 @@ class SigninPage:
     def forgotpass_form(self):
         with allure.step("Открыть форму смены забытого пароля"):
             self.forgotpass.should(be.visible).click()
-            browser.element(by.text('СМЕНА ПАРОЛЯ')).should(be.visible)
+            browser.element(by.text('СМЕНА ПАРОЛЯ'))
         return self

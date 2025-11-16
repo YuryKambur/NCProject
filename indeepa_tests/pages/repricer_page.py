@@ -8,7 +8,7 @@ class RepricerPage:
 
     @allure.step("Открыть страницу формы тарифы")
     def open(self):
-        browser.open('https://start.indeepa.com/')
+        browser.open('https://indeepa.com/')
         return self
 
     @allure.step("Кликнуть по кнопке 'Скачать презентацию'")
