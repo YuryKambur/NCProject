@@ -14,6 +14,7 @@ from utils import allure_attach
 
 DEFAULT_BROWSER_VERSION = "128.0"
 DEFAULT_BROWSER_NAME = "chrome"
+URL = "https://api.indeepa.com/prod/api"
 
 
 def pytest_addoption(parser):
@@ -39,6 +40,12 @@ def panel():
 @pytest.fixture
 def repricer_page():
     return RepricerPage()
+
+
+
+@pytest.fixture
+def api_base_url():
+    return URL
 
 
 @pytest.fixture(scope="session", autouse=True)
